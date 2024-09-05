@@ -11,5 +11,6 @@
     padding: 20px;          /* Space around the card */
     align-items: center;  /* Rounded corners */
     justify-content: center;
+    width: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
 }
