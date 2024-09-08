@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import '../../page/entry-style.css'
 import { Row, Col, Form, Button, Card } from 'react-bootstrap';
 import PropTypes from 'prop-types';
-export const  PasswordReset = ({handleOnchange,handleOnResetsubmit,FormSwitcher,email}) => {
+ const  PasswordReset = ({handleOnchange,handleOnResetsubmit,FormSwitcher,email}) => {
   return (
     <div>
 <Row className="w-100">
@@ -30,11 +30,13 @@ export const  PasswordReset = ({handleOnchange,handleOnResetsubmit,FormSwitcher,
         </Col>
       </Row>
     </div>
-  );
-};
+  )
+}
 PasswordReset.propTypes = {
     handleOnchange: PropTypes.func.isRequired,
     handleOnResetsubmit: PropTypes.func.isRequired,
     FormSwitcher : PropTypes.func.isRequired,
     email: PropTypes.string.isRequired
 };
+
+export default PasswordReset;

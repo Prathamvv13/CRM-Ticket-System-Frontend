@@ -1,7 +1,7 @@
 import './entry-style.css';
 import React,{useState} from 'react';
-import {LoginForm} from "../components/login/login component";
-import { PasswordReset } from "../components/login/password-reset";
+import { LoginForm } from "../page/login/login component";
+import PasswordReset from "../page/login/password reset";
 const Entry = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -46,10 +46,9 @@ const FormSwitcher = (frmType) => {
   return (
   <div className='entry-page'>
     {Formload ==='login' && <LoginForm handleOnchange={handleOnchange} handleOnsubmit={handleOnsubmit} FormSwitcher={FormSwitcher} email={email} pass={password}/>}
-    {Formload ==='reset' && <PasswordReset handleOnchange={handleOnchange} handleOnResetsubmit={handleOnResetsubmit} FormSwitcher={FormSwitcher}  email={email}/>}
+    {Formload ==='reset' && <PasswordReset PasswordReset handleOnchange={handleOnchange} handleOnResetsubmit={handleOnResetsubmit} FormSwitcher={FormSwitcher}  email={email}/> }
     </div>
   );
 }
+export default Entry;
 
-
-export default Entry
