@@ -3,6 +3,7 @@ import { Container,Row,Col,Button } from 'react-bootstrap';
 import { PageBreadcrumb } from '../../components/breadcrumb/Breadcrumb.comp';
 import { SearchForm } from "../../components/search-form/SearchForm.comp"
 import { TicketTable }  from "../../components/login/TicketTable.comp";
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import tickets from "../../data/{} dummy-tickets.json"
 export const TicketLists = () => {
 
@@ -35,7 +36,10 @@ const searchTicket = (sttr) =>{
  
         <Row className='mt-4'>
         <Col>
+        <Link to="add-ticket">
         <Button variant="primary"> Add New Ticket</Button>
+        </Link>
+        
         </Col>
         <Col className="d-flex justify-content-end">  <SearchForm  handleOnChange={handleOnChange} str={str}/> </Col>
         </Row>

@@ -23,10 +23,10 @@ export const AddTicketForm = ({handleOnsubmit,handleOnchange,frmDt}) => {
                     <Form.Label>Issue Details</Form.Label>
                     <Form.Control as="textarea" name="Details" rows="5" value={frmDt.Deails} onChange={handleOnchange} required />
                   </Form.Group>
-
                   <Button variant="primary" type="submit" className="w-100">
                     Add Ticket
                   </Button>
+                  
                 </Form>
               </Card.Body>
             </Card>
